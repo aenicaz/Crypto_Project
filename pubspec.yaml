@@ -1,0 +1,7 @@
+name: crypto_project
+dependencies:
+  crypto: any
+
+
+dev_dependencies:
+  test: any
