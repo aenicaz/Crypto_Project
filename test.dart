@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:math';
 
-import 'package:crypto/crypto.dart';
 import 'package:test/test.dart';
 import 'Encryption method/egsa_cipher.dart';
 

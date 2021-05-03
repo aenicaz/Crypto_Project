@@ -5,6 +5,7 @@ import 'Encryption method/backpack_cipher.dart';
 import 'Encryption method/caesar_cipher.dart';
 import 'Encryption method/rsa_cipher.dart';
 import 'Encryption method/xor_cipher.dart';
+import 'Encryption method/egsa_cipher.dart';
 
 void main(){
 
@@ -14,8 +15,9 @@ void main(){
         "\n 1 -> Caesar"
         "\n 2 -> Xor"
         "\n 3 -> Backpack"
-        "\n 4 -> RSA"
-        "\n 5 -> Exit");
+        "\n 4 -> RSA "
+        "\n 5 -> EGSA"
+        "\n 6 -> Exit");
     print('Method: ');
   }
 
@@ -63,8 +65,15 @@ void main(){
         break;
 
         case 5:
-          exit(0);
+          Egsa eg = Egsa(5);
+          print(eg.toString());
+          eg.Decrypt(5);
           break;
+
+      case 6:
+        exit(0);
+        break;
+
     }
   } while (true);
 }

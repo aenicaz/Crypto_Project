@@ -48,7 +48,7 @@ class BackPackCipher{
 
     q = superIncreasingSequence.reduce((value, element) => value + element);
 
-    while(!IsNumberSimple(q)){
+    while(!NumberSimple(q)){
       q += random.nextInt(100);
     }
 
@@ -57,19 +57,15 @@ class BackPackCipher{
     print("This is SUM OF SEQUENCE WITH RANDOM(q): $q");
   }
 
-  bool IsNumberSimple(int n) {
-    // если n > 1
+  bool NumberSimple(int n) {
     if (n > 1)
     {
-      // в цикле перебираем числа от 2 до n - 1
       for (int i = 2; i < n; i++)
-        if (n % i == 0) // если n делится без остатка на i - возвращаем false (число не простое)
+        if (n % i == 0)
           return false;
-
-      // если программа дошла до данного оператора, то возвращаем true (число простое) - проверка пройдена
       return true;
     }
-    else // иначе возвращаем false (число не простое)
+    else
       return false;
   }
 

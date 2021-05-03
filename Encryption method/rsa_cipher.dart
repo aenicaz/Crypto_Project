@@ -14,14 +14,14 @@ class Rsa{
 
     do{
       _p = rnd.nextInt(1000);
-    } while (!_IsNumberSimple(_p));
+    } while (!_NumberSimple(_p));
 
     do{
       _q = rnd.nextInt(1000);
-    } while (!_IsNumberSimple(_q));
+    } while (!_NumberSimple(_q));
   }
 
-  bool _IsNumberSimple(int n) {
+  bool _NumberSimple(int n) {
     if (n > 1)
     {
       for (int i = 2; i < n; i++)
@@ -90,6 +90,7 @@ class Rsa{
 
     BigInt bigInt;
     List<int> tmp = [];
+
     for(int i = 0; i < bigList.length; i++){
       bigInt = bigList[i];
       BigInt nn = BigInt.from(_n);
@@ -99,8 +100,7 @@ class Rsa{
 
       tmp.add(int.parse(bigInt.toString()));
     }
-
     print('Decrypted message: ${tmp}');
-    print('In UTF8: ${utf8.decode(tmp)}');
+//    print('In UTF8: ${utf8.decode(tmp)}');
   }
 }
